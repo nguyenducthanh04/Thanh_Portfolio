@@ -30,39 +30,10 @@ const projects: Project[] = [
     description: "Construction and design of smart house model",
     link: "https://github.com/nguyenducthanh04/Thiet-Ke-Nha-Thong-Minh"
   },
-  // {
-  //   id: 3,
-  //   title: "Summoner's Rift",
-  //   category: "RESTFUL API",
-  //   image: "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   description: "Gaming community platform"
-  // },
-  // {
-  //   id: 4,
-  //   title: "Product Landing",
-  //   category: "CSS/JAVASCRIPT",
-  //   image: "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   description: "Razer product showcase"
-  // },
-  // {
-  //   id: 5,
-  //   title: "Portfolio Site",
-  //   category: "SCSS/REACT",
-  //   image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   description: "Personal portfolio website"
-  // },
-  // {
-  //   id: 6,
-  //   title: "Music Player",
-  //   category: "RESTFUL API",
-  //   image: "https://images.pexels.com/photos/1813346/pexels-photo-1813346.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   description: "Web music streaming app"
-  // }
 ];
 
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
-  const [portfolioFilter, setPortfolioFilter] = useState('ALL');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -88,10 +59,6 @@ function App() {
     alert('Message sent successfully!');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
-
-  // const filteredProjects = portfolioFilter === 'ALL' 
-  //   ? projects 
-  //   : projects.filter(project => project.category === portfolioFilter);
 
   const NavigationSidebar = () => (
     <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 space-y-4">
