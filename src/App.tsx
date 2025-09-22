@@ -124,7 +124,7 @@ function App() {
             </h1>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-              Hello mọi người! Mình là Nguyen Duc Thanh, mình chuẩn bị trở thành du học sinh Taiwan, mình đang theo học IT chuyên ngành phần mềm, sắp tới mình muốn theo học AI đặc biệt là AI Agent, đây là website của mình nơi sẽ chứa thông tin cá nhân của mình.
+              Hello mọi người! Mình là Nguyen Duc Thanh, mình chuẩn bị trở thành du học sinh Taiwan chuyên ngành Computer Science, mình đang theo học IT chuyên ngành phần mềm, sắp tới mình muốn theo học AI đặc biệt là AI Agent, đây là website của mình nơi sẽ chứa thông tin cá nhân của mình.
             </p>
 
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 pt-8">
@@ -156,7 +156,7 @@ function App() {
         <div className="text-center mb-16">
           <h1 className="text-5xl lg:text-6xl font-bold mb-8">
             <span className="text-white">MY </span>
-            <span className="text-yellow-500">PORTFOLIO</span>
+            <span className="text-yellow-500">PROJECT</span>
           </h1>
         </div>
 
