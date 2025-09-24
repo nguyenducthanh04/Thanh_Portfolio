@@ -258,12 +258,12 @@ function App() {
   );
 
   const AboutPage = () => (
-    <div className={`min-h-screen bg-black px-4 sm:px-6 lg:px-16 py-12 sm:py-16 transition-all duration-1000 ${currentSection === 'about' ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`min-h-screen ${theme === "dark" ? "bg-black" : "bg-light"} px-4 sm:px-6 lg:px-16 py-12 sm:py-16 transition-all duration-1000 ${currentSection === 'about' ? 'opacity-100' : 'opacity-0'}`}>
       <div style = {{marginBottom: "100px"}} className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">ABOUT </span>
-            <span className="text-yellow-500">ME</span>
+            <span className={`${theme === "dark" ? "text-white" : "text-grey"}`}>ABOUT </span>
+            <span className={`${theme === "dark" ? "text-yellow-500" : "text-lime-500"}`}>ME</span>
           </h1>
         </div>
 
@@ -273,23 +273,23 @@ function App() {
             
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8">
               <div className="space-y-3 sm:space-y-4">
-                <div><span className="text-gray-400 text-sm">First Name:</span> <span className="text-white text-sm sm:text-base">Nguyen</span></div>
-                <div><span className="text-gray-400 text-sm">Birthday:</span> <span className="text-white text-sm sm:text-base">21 Years</span></div>
-                <div><span className="text-gray-400 text-sm">National:</span> <span className="text-white text-sm sm:text-base">Vietnam</span></div>
-                <div><span className="text-gray-400 text-sm">Phone:</span> <span className="text-white text-sm sm:text-base">0792185204</span></div>
-                <div><span className="text-gray-400 text-sm">Language:</span> <span className="text-white text-sm sm:text-base">漢語</span></div>
+                <div><span className="text-gray-400 text-sm">First Name:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>Nguyen</span></div>
+                <div><span className="text-gray-400 text-sm">Birthday:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>21 Years</span></div>
+                <div><span className="text-gray-400 text-sm">National:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>Vietnam</span></div>
+                <div><span className="text-gray-400 text-sm">Phone:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>0792185204</span></div>
+                <div><span className="text-gray-400 text-sm">Language:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>漢語</span></div>
               </div>
               
               <div className="space-y-3 sm:space-y-4">
-                <div><span className="text-gray-400 text-sm">Last Name:</span> <span className="text-white text-sm sm:text-base">Duc Thanh</span></div>
-                <div><span className="text-gray-400 text-sm">Sex:</span> <span className="text-white text-sm sm:text-base">Male</span></div>
-                <div><span className="text-gray-400 text-sm">Address:</span> <span className="text-white text-sm sm:text-base">Vietnam</span></div>
-                <div><span className="text-gray-400 text-sm">Facebook:</span> <span className="text-white text-xs sm:text-sm break-all">https://www.facebook.com/nguyen.uc.thanh.475548/</span></div>
-                <div><span className="text-gray-400 text-sm">Email:</span> <span className="text-white text-xs sm:text-sm break-all">dducthanh04@gmail.com</span></div>
+                <div><span className="text-gray-400 text-sm">Last Name:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>Duc Thanh</span></div>
+                <div><span className="text-gray-400 text-sm">Sex:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>Male</span></div>
+                <div><span className="text-gray-400 text-sm">Address:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>Vietnam</span></div>
+                <div><span className="text-gray-400 text-sm">Facebook:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>https://www.facebook.com/nguyen.uc.thanh.475548/</span></div>
+                <div><span className="text-gray-400 text-sm">Email:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>dducthanh04@gmail.com</span></div>
               </div>
             </div>
 
-            <button className="group bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 flex items-center space-x-2 transform hover:scale-105 text-sm sm:text-base">
+            <button className={`group ${theme === "dark" ? "bg-yellow-500 hover:bg-yellow-600": "bg-lime-500 hover:bg-lime-600"} text-black font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 flex items-center space-x-2 transform hover:scale-105 text-sm sm:text-base`}>
               <Download size={18} />
               <span>DOWNLOAD CV</span>
             </button>
@@ -298,28 +298,28 @@ function App() {
           <div className={`transform transition-all duration-1000 delay-500 ${currentSection === 'about' ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
             <div className="grid grid-cols-2 gap-6 sm:gap-8">
               <div className="text-center">
-                <div className="text-4xl sm:text-6xl font-bold text-yellow-500 mb-2 sm:mb-4">1+</div>
+                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>1+</div>
                 <div className="text-gray-400 text-sm sm:text-lg">
                   YEARS OF<br />EXPERIENCE
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-4xl sm:text-6xl font-bold text-yellow-500 mb-2 sm:mb-4">7+</div>
+                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>7+</div>
                 <div className="text-gray-400 text-sm sm:text-lg">
                   COMPLETED<br />PROJECTS
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-4xl sm:text-6xl font-bold text-yellow-500 mb-2 sm:mb-4">1+</div>
+                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>1+</div>
                 <div className="text-gray-400 text-sm sm:text-lg">
                   HAPPY<br />CUSTOMER
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-4xl sm:text-6xl font-bold text-yellow-500 mb-2 sm:mb-4">1+</div>
+                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>1+</div>
                 <div className="text-gray-400 text-sm sm:text-lg">
                   AWARD<br />WON
                 </div>
@@ -332,12 +332,12 @@ function App() {
   );
 
   const ContactPage = () => (
-    <div className={`min-h-screen bg-black px-4 sm:px-6 lg:px-16 py-12 sm:py-16 transition-all duration-1000 ${currentSection === 'contact' ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`min-h-screen ${theme === "dark" ? "bg-black" : "bg-light"} px-4 sm:px-6 lg:px-16 py-12 sm:py-16 transition-all duration-1000 ${currentSection === 'contact' ? 'opacity-100' : 'opacity-0'}`}>
       <div style = {{marginBottom: "100px"}} className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">GET IN </span>
-            <span className="text-yellow-500">TOUCH</span>
+            <span className={`${theme === "dark" ? "text-white" : "text-grey"}`}>GET IN </span>
+            <span className={`${theme === "dark" ? "text-yellow-500" : "text-lime-500"}`}>TOUCH</span>
           </h1>
         </div>
 
