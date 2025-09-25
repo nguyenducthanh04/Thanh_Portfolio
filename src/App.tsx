@@ -183,7 +183,7 @@ function App() {
               <br />
             </h1>
 
-            <p className={`${theme === "dark" ? "text-gray-300" : "text-black-300"} text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl`}>
+            <p className={`${theme === "dark" ? "text-gray-300" : "text-gray-600"} text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl`}>
               Hello mọi người! Mình là Nguyen Duc Thanh, mình chuẩn bị trở thành du học sinh Taiwan chuyên ngành Computer Science, mình đang theo học IT chuyên ngành phần mềm, sắp tới mình muốn theo học AI đặc biệt là AI Agent, đây là website của mình nơi sẽ chứa thông tin cá nhân của mình.
             </p>
 
@@ -343,40 +343,40 @@ function App() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div className={`transform transition-all duration-1000 delay-300 ${currentSection === 'contact' ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">DON'T BE SHY !</h2>
+            <h2 className={`text-2xl sm:text-3xl font-bold ${theme === "dark" ? "text-white" : "text-grey-400"} mb-6 sm:mb-8`}>DON'T BE SHY !</h2>
             
-            <p className="text-gray-300 text-sm sm:text-base lg:text-lg mb-8 sm:mb-12 leading-relaxed">
+            <p className={`${theme === "dark" ? "text-gray-300" : "text-gray-500"} text-sm sm:text-base lg:text-lg mb-8 sm:mb-12 leading-relaxed`}>
               Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
             </p>
 
             <div className="space-y-6 sm:space-y-8 mb-8 sm:mb-12">
               <div className="flex items-center space-x-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-500 rounded-full flex items-center justify-center">
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 ${theme === "dark" ? "bg-yellow-500" : "bg-lime-500"} rounded-full flex items-center justify-center`}>
                   <MapPin size={16} className="text-black" />
                 </div>
                 <div>
-                  <div className="text-white font-semibold text-sm sm:text-base">ADDRESS</div>
-                  <div className="text-gray-300 text-sm sm:text-base">Taiwan</div>
+                  <div className={`${theme === "dark" ? "text-white" : "text-grey-500"} font-semibold text-sm sm:text-base`}>ADDRESS</div>
+                  <div className={` ${theme === "dark" ? "text-gray-300" : "text-gray-400"} text-sm sm:text-base`}>Taiwan</div>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-500 rounded-full flex items-center justify-center">
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 ${theme === "dark" ? "bg-yellow-500" : "bg-lime-500"} rounded-full flex items-center justify-center`}>
                   <Mail size={16} className="text-black" />
                 </div>
                 <div>
-                  <div className="text-white font-semibold text-sm sm:text-base">EMAIL</div>
-                  <div className="text-gray-300 text-sm sm:text-base break-all">dducthanh04@gmail.com</div>
+                  <div className={`${theme === "dark" ? "text-white" : "text-grey-500"} font-semibold text-sm sm:text-base`}>EMAIL</div>
+                  <div className={` ${theme === "dark" ? "text-gray-300" : "text-gray-400"} text-sm sm:text-base`}>dducthanh04@gmail.com</div>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-500 rounded-full flex items-center justify-center">
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 ${theme === "dark" ? "bg-yellow-500" : "bg-lime-500"} rounded-full flex items-center justify-center`}>
                   <Phone size={16} className="text-black" />
                 </div>
                 <div>
-                  <div className="text-white font-semibold text-sm sm:text-base">PHONE</div>
-                  <div className="text-gray-300 text-sm sm:text-base">0792185204</div>
+                  <div className={`${theme === "dark" ? "text-white" : "text-grey-500"} font-semibold text-sm sm:text-base`}>PHONE</div>
+                  <div className={` ${theme === "dark" ? "text-gray-300" : "text-gray-400"} text-sm sm:text-base`}>0792185204</div>
                 </div>
               </div>
             </div>
@@ -440,7 +440,7 @@ function App() {
               
               <button
                 type="submit"
-                className="group bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 flex items-center space-x-2 transform hover:scale-105 text-sm sm:text-base"
+                className={`group ${theme === "dark" ? "bg-yellow-500 hover:bg-yellow-600" : "bg-lime-500 hover:bg-lime-600"}  text-black font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 flex items-center space-x-2 transform hover:scale-105 text-sm sm:text-base`}
               >
                 <Send size={18} />
                 <span>SEND MESSAGE</span>
