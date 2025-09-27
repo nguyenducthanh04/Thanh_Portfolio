@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Home, Briefcase, User, Mail, Lightbulb, Github, Facebook, Download, MapPin, Phone, Send, ArrowRight } from 'lucide-react';
-import Avatar from "../src/Assets/avt.jpg";
+import Avatar from "../src/Assets/avatar.jpg";
 import Movie from "../src/Assets/movie.jpg";
 import SmartHome from "../src/Assets/project2.jpg";
 
@@ -164,7 +164,7 @@ function App() {
       <div className="relative z-10 flex items-center min-h-screen px-4 sm:px-6 lg:px-16">
         <div style={{marginBottom: "100px"}} className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-7xl mx-auto">
           <div className={`flex justify-center lg:justify-start transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
-            <div className="w-64 h-80 sm:w-72 sm:h-96 bg-gray-200 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300">
+            <div className="w-64 h-80 sm:w-72 sm:h-96 bg-gray-200 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300 mt-[50px] sm:mt-0">
               <img 
                 src={Avatar}
                 alt="Nguyen Duc Thanh"
@@ -269,15 +269,15 @@ function App() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div className={`transform transition-all duration-1000 delay-300 ${currentSection === 'about' ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">PERSONAL INFOS</h2>
+            <h2 className={`text-2xl sm:text-3xl font-bold ${theme === "dark" ? "text-white" : "text-grey"} mb-6 sm:mb-8`}>PERSONAL INFOS</h2>
             
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8">
               <div className="space-y-3 sm:space-y-4">
-                <div><span className="text-gray-400 text-sm">First Name:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>Nguyen</span></div>
-                <div><span className="text-gray-400 text-sm">Birthday:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>21 Years</span></div>
-                <div><span className="text-gray-400 text-sm">National:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>Vietnam</span></div>
-                <div><span className="text-gray-400 text-sm">Phone:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>0792185204</span></div>
-                <div><span className="text-gray-400 text-sm">Language:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"}text-white text-sm sm:text-base`}>漢語</span></div>
+                <div><span className="text-gray-400 text-sm">First Name:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>Nguyen</span></div>
+                <div><span className="text-gray-400 text-sm">Birthday:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>21 Years</span></div>
+                <div><span className="text-gray-400 text-sm">National:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>Vietnam</span></div>
+                <div><span className="text-gray-400 text-sm">Phone:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>0792185204</span></div>
+                <div><span className="text-gray-400 text-sm">Language:</span> <span className={`${theme === "dark" ? "text-white" : "text-grey-600"} text-sm sm:text-base`}>漢語</span></div>
               </div>
               
               <div className="space-y-3 sm:space-y-4">
@@ -298,14 +298,14 @@ function App() {
           <div className={`transform transition-all duration-1000 delay-500 ${currentSection === 'about' ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
             <div className="grid grid-cols-2 gap-6 sm:gap-8">
               <div className="text-center">
-                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>1+</div>
+                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>-1</div>
                 <div className="text-gray-400 text-sm sm:text-lg">
                   YEARS OF<br />EXPERIENCE
                 </div>
               </div>
               
               <div className="text-center">
-                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>7+</div>
+                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>2</div>
                 <div className="text-gray-400 text-sm sm:text-lg">
                   COMPLETED<br />PROJECTS
                 </div>
@@ -319,7 +319,7 @@ function App() {
               </div>
               
               <div className="text-center">
-                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>1+</div>
+                <div className={`text-4xl sm:text-6xl font-bold ${theme === "dark" ? "text-yellow-500" : "text-lime-500"} mb-2 sm:mb-4`}>2+</div>
                 <div className="text-gray-400 text-sm sm:text-lg">
                   AWARD<br />WON
                 </div>
